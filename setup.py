@@ -29,7 +29,7 @@ import shutil
 import time
 
 def do_system(cmd):
-    print cmd
+    print(cmd)
     if os.system(cmd):
         raise SystemError("Failed: %s" % cmd)
 
