@@ -38,7 +38,7 @@ class build_ext(distutils.command.build_ext.build_ext):
     def run(self):
         # Hack to build C sources first
         if os.path.exists('c'):
-            print "Removing old c directory"
+            print("Removing old c directory")
             shutil.rmtree('c')
         do_system("tar xzf c.tgz")
         os.utime("c/config.h.in", (time.time(), time.time()))
